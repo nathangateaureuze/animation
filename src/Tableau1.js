@@ -3,38 +3,70 @@ class Tableau1 extends Phaser.Scene{
 
     preload(){
         for (let i=1;i<=10;i++){
-            this.load.image('boy-idle'+i , 'assets/Characters/boy/boy_style_1/PNG/idle/Layer-'+i+'.png')
+            this.load.image('boy1-idle'+i , 'assets/Characters/boy/boy_style_1/PNG/idle/Layer-'+i+'.png')
         }
         for (let i=1;i<=10;i++){
-            this.load.image('boy-idle-cligne'+i , 'assets/Characters/boy/boy_style_1/PNG/idle2/Layer-'+i+'.png')
+            this.load.image('boy3-idle'+i , 'assets/Characters/boy/boy_style_3/PNG/idle/Layer-'+i+'.png')
+        }
+        for (let i=1;i<=10;i++){
+            this.load.image('enemy1-idle'+i , 'assets/Characters/enemy 1/PNG/idle/Layer-'+i+'.png')
+        }
+        for (let i=1;i<=6;i++){
+            this.load.image('enemy2-idle'+i , 'assets/Characters/enemy 2/PNG/idle/Layer-'+i+'.png')
         }
     }
 
     create(){
         this.initKeyboard()
+
         /**
-         * animation quand y bouge pas
+         * animation bonhomme 1 quand y bouge pas
          */
-        this.boyIdle = this.add.sprite(0, 0, 'boy-idle').setOrigin(0,0);
+        this.boy1Idle = this.add.sprite(-150, 0, 'boy1-idle').setOrigin(0,0);
         this.anims.create({
-            key: 'boy-idle',
-            frames: this.getFrames('boy-idle',10),
-            frameRate: 12,
+            key: 'boy1-idle',
+            frames: this.getFrames('boy1-idle',10),
+            frameRate: 10,
             repeat: -1
         });
 
         /**
-         * animation quand y bouge pas  et il cligne des yeux
+         * animation bonhomme 3 quand y bouge pas
          */
-        this.boyIdleCligne = this.add.sprite(100, 0, 'boy-idle-cligne').setOrigin(0,0);
+        this.boy3Idle = this.add.sprite(500, 0, 'boy3-idle').setOrigin(0,0);
         this.anims.create({
-            key: 'boy-idle-cligne',
-            frames: this.getFrames('boy-idle-cligne',10),
-            frameRate: 12,
+            key: 'boy3-idle',
+            frames: this.getFrames('boy3-idle',10),
+            frameRate: 10,
             repeat: -1
         });
 
+        /**
+         * animation tronc sur pattes quand y bouge pas
+         */
+        this.enemy1Idle = this.add.sprite(50, -50, 'enemy1-idle').setOrigin(0,0);
+        this.anims.create({
+            key: 'enemy1-idle',
+            frames: this.getFrames('enemy1-idle',10),
+            frameRate: 10,
+            repeat: -1
+        });
 
+        /**
+         * animation sorte de mouche quand y bouge pas
+         */
+        this.enemy2Idle = this.add.sprite(380, 130, 'enemy2-idle').setOrigin(0,0);
+        this.anims.create({
+            key: 'enemy2-idle',
+            frames: this.getFrames('enemy2-idle',6),
+            frameRate: 10,
+            repeat: -1
+        });
+
+        this.boy1Idle.play('boy1-idle')
+        this.boy3Idle.play('boy3-idle')
+        this.enemy1Idle.play('enemy1-idle')
+        this.enemy2Idle.play('enemy2-idle')
     }
 
     /**
@@ -53,17 +85,6 @@ class Tableau1 extends Phaser.Scene{
 
 
     initKeyboard(){
-        this.input.keyboard.on('keydown', function(kevent)
-        {
-            switch (kevent.keyCode)
-            {
-                case !Phaser.Input.Keyboard.KeyCodes:
-                    this.boyIdle.play('boy-idle-cligne')
-                    this.boyIdleCligne.play('boy-idle')
-                    break;
-
-            }
-        });
 
     }
 

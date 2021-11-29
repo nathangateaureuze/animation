@@ -67,6 +67,14 @@ class Tableau1 extends Phaser.Scene{
         this.boy3Idle.play('boy3-idle')
         this.enemy1Idle.play('enemy1-idle')
         this.enemy2Idle.play('enemy2-idle')
+
+        let tween = this.tweens.add({
+            targets: this.enemy2Idle,
+            x: 0,
+            duration: 5000,
+            ease: 'Expo',
+            loop: 1,
+        });
     }
 
     /**

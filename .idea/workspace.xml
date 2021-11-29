@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7714ce67-d7d2-4d98-8aca-fc2d68f37a54" name="Changes" comment="" />
+    <list default="true" id="7714ce67-d7d2-4d98-8aca-fc2d68f37a54" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tableau1.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tableau1.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -40,6 +43,8 @@
       <workItem from="1637592412373" duration="3000" />
       <workItem from="1637687738864" duration="617000" />
       <workItem from="1637688736994" duration="2448000" />
+      <workItem from="1638187772600" duration="11000" />
+      <workItem from="1638190601326" duration="6411000" />
     </task>
     <servers />
   </component>
